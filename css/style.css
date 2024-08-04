@@ -1,0 +1,259 @@
+/*http://www.engage.veented.com/bakery/*/
+:root{
+    --main-color:#8E7754;
+    --color-text:#686868;
+    --font-size15:0.95rem;
+    --font-size18:1.125rem;
+    --color-text1:#969696;
+    --color-icon:#403D38;
+}
+.bg-icon{
+    background-color: var(--color-icon);
+}
+.text-color{
+    color: var(--color-text);
+}
+.text-color1{
+    color: var(--color-text1);
+}
+.text15{
+    font-size: var( --font-size15);
+}
+.text18{
+    font-size: var( --font-size18);
+}
+.font-text{
+    font-family: "Alegreya Sans";
+}
+.bg-color-accent{
+    background-color: var(--main-color);
+}
+.color-accent{
+    color: var(--main-color);
+}
+body{
+    font-family: 'Alegreya', serif;
+    overflow:hidden;
+}
+*{
+    box-sizing: border-box;
+}
+/*****************loding Screen*/
+.loadingScreen{
+    background-color: black;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 9999999999999999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.loader {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: inline-block;
+    border-top: 3px solid #FFF;
+    border-right: 3px solid transparent;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+  }
+  
+  @keyframes rotation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  } 
+/********************/
+#sideBar{
+    display: flex;
+    position: fixed;
+    width:20%;
+    top: 30%;
+    
+}
+.sidBar-inner{
+    background-color: #FFF;
+    padding: .5rem;
+    
+}
+#sideBar i{
+    align-self: self-start;
+    background-color: #FFF;
+    color: #666666;
+    padding: .5rem;
+}
+.colorBox{
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+}
+/********************/
+.arrowUP{
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+    border-radius: 50%;
+    border: #353330;
+    padding: .5rem;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    background-color: #00000099;
+    display: none;
+}
+header{
+    background-image: url(../images/drew-coffman-1872.jpg);
+    background-position: center center;
+    background-size: cover;
+   
+}
+nav{
+    z-index: 999999999;
+    transition:background-color 2s ;
+}
+nav a{
+    font-size: 1.125rem !important;
+    
+}
+.navbar-nav .nav-link.active{
+    color: #fff ; 
+}
+#Home .btn-color{
+    background-color: var(--main-color);
+}
+.btn-color:hover{
+    background-color: #fff ;
+    color: black !important;
+}
+#Home .text-p{
+    font-size: 1.5rem;
+    line-height: 1.86em;
+    margin: .625rem 0rem 1.25rem;
+    
+}
+#Home h1{
+    font-size: 4.75rem;
+    margin-bottom:18px;
+    padding: 0px !important;
+    
+}
+#Home p{
+    font-size: 1.375rem;
+    margin-bottom: .3125rem;
+    
+}
+#Home .circle-home{
+    bottom: 0%;
+    left: 48%;
+    width: 2rem;
+    height: 3.125rem;
+    border: 2px solid rgba(255,255,255,0.7);
+    border-radius: 40%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    
+}
+#Home .circle-point{
+    width: .5rem;
+    height: .5rem;
+    position: absolute;
+    top:15%;
+    border: 2px solid rgba(255,255,255,0.7);
+    border-radius: 50%;
+    background-color: rgba(255,255,255,0.7);
+    animation: mymove 3s infinite;
+    
+}
+@keyframes mymove {
+   
+    20%  {top: 20%;opacity: 50%;}
+    30%  {top: 30%;opacity: 0%;}
+    40%  {top: 40%;opacity: 0%;}
+    50%  {top: 50%;opacity: 0%;}
+    50%  {top: 0%;opacity: 50%;}
+    40%  {top: 20%;opacity: 0%;}
+    30%  {top: 30%;opacity: 0%;}
+    20%  {top: 20%;opacity: 60%;}
+   
+
+
+
+   
+}
+/************************************************************/
+#About p{
+    line-height: 1.86em;
+    padding-top: 2rem;
+    padding-left: 2rem;
+    font-family: "Alegreya Sans";
+}
+#About .icon-list li,#Blog li,#Contact li{
+    list-style-type: none;
+    margin-bottom: 1rem;
+  
+}
+#About .icon-list i{
+    background: none !important;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: 50%;
+    width: 2.75rem;
+    height: 2.75rem;
+    font-size: 1.25rem;
+    padding-top: .6rem;
+    
+
+}
+
+.circle-icon{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+}
+#OurOffer,#Blog{
+    background-color: #f8f8f8;
+}
+
+#Contact .footer-main{
+    background-color: #403D38;
+}
+#Contact .footer-bottom{
+    background-color: #353330;
+}
+#Contact .footer-bottom .social:hover{
+    color: #fff;
+}
+#Contact .footer-bottom .icon-facebook:hover{
+    background-color:#4267B2;
+}
+#Contact .footer-bottom .icon-google-plus:hover{
+    background-color: #dd4b39 ;
+}
+#Contact .footer-bottom .icon-linkedin:hover{
+    background-color: #0077b5 ;
+}
+#Contact .footer-bottom .icon-twitter:hover{
+    background-color: #1DA1F2 ;
+}
+@media only screen and (max-width: 768px){
+    nav{
+        background-color: #fff;
+    }
+   nav .nav-link{
+    color: black !important;
+    font-size: 1rem !important;
+}
+    #Home h1{
+        font-size: 2.125rem !important;
+    }
+    #Home p,#Home .text-p{
+        font-size: 1rem;
+    }
+}
