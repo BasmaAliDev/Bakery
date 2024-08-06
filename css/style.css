@@ -118,13 +118,49 @@ nav{
     z-index: 999999999;
     transition:background-color 2s ;
 }
-nav a{
+nav .nav-links a{
     font-size: 1.125rem !important;
-    
+    position: relative;
+}
+nav li a{
+   position: relative;
 }
 .navbar-nav .nav-link.active{
     color: #fff ; 
 }
+
+nav li a::before {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 20%;
+    width: 0px;
+    height: 2px;
+    background-color: var(--main-color);
+  transition: width 1s ;
+  }
+  nav li a:hover{
+    color: black !important;
+  }
+  body:has(.about:target) li a[href="#About"],
+  body:has(.ourOffer:target) li a[href="#OurOffer"],
+  body:has(.gallery:target) li a[href="#Gallery"],
+  body:has(.blog:target) li a[href="#Blog"],
+  body:has(.footer:target) li a[href="#Contact"]{
+    color: black !important;
+  }
+body:not(body:has(:target)) li a[href="#Home"]::before,
+body:has(.home:target) li a[href="#Home"]::before,
+body:has(.about:target) li a[href="#About"]::before,
+body:has(.ourOffer:target) li a[href="#OurOffer"]::before,
+body:has(.gallery:target) li a[href="#Gallery"]::before,
+body:has(.blog:target) li a[href="#Blog"]::before,
+body:has(.footer:target) li a[href="#Contact"]::before{
+    
+    width: 50px;
+}
+
+/************************************************************/
 #Home .btn-color{
     background-color: var(--main-color);
 }
