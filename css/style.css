@@ -74,9 +74,9 @@ body{
 #sideBar{
     display: flex;
     position: fixed;
-    width:20%;
+    z-index: 999999;
+    width:15%;
     top: 30%;
-    
 }
 .sidBar-inner{
     background-color: #FFF;
@@ -85,9 +85,12 @@ body{
 }
 #sideBar i{
     align-self: self-start;
+    font-size: 1.375rem;
     background-color: #FFF;
-    color: #666666;
+    color: #666;
     padding: .5rem;
+   border-top-left-radius: 5px;
+   border-bottom-left-radius: 5px;
 }
 .colorBox{
     width: 30px;
@@ -112,7 +115,6 @@ header{
     background-image: url(../images/drew-coffman-1872.jpg);
     background-position: center center;
     background-size: cover;
-   
 }
 nav{
     z-index: 999999999;
@@ -186,7 +188,7 @@ body:has(.footer:target) li a[href="#Contact"]::before{
     
 }
 #Home .circle-home{
-    bottom: 0%;
+    bottom: 5%;
     left: 48%;
     width: 2rem;
     height: 3.125rem;
@@ -201,28 +203,24 @@ body:has(.footer:target) li a[href="#Contact"]::before{
     width: .5rem;
     height: .5rem;
     position: absolute;
-    top:15%;
     border: 2px solid rgba(255,255,255,0.7);
     border-radius: 50%;
+    top: 10%;
+    opacity: 0;
     background-color: rgba(255,255,255,0.7);
     animation: mymove 3s infinite;
     
 }
 @keyframes mymove {
-   
-    20%  {top: 20%;opacity: 50%;}
+    10%  {top: 10%;opacity: 0%;}
+    20%  {top: 20%;opacity: 0%;}
     30%  {top: 30%;opacity: 0%;}
-    40%  {top: 40%;opacity: 0%;}
-    50%  {top: 50%;opacity: 0%;}
-    50%  {top: 0%;opacity: 50%;}
-    40%  {top: 20%;opacity: 0%;}
+    40%  {top: 40%;opacity: 50%;}
+    50%  {top: 50%;opacity: 50%;}
+    50%  {top: 40%;opacity: 50%;}
+    40%  {top: 30%;opacity: 40%;}
     30%  {top: 30%;opacity: 0%;}
-    20%  {top: 20%;opacity: 60%;}
-   
-
-
-
-   
+    20%  {top: 20%;opacity: 0%;}
 }
 /************************************************************/
 #About p{
