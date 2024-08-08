@@ -24,7 +24,28 @@ $(window).scroll(function () {
     }
 
 })
-/**************navbar background Color when scroll************/
+/****************************************************************/
+if ($(window).width() <= 992) {
+    $(".navbar").css("backgroundColor", "#fff");
+    $("nav a").css("color", "#686868");
+    $(".navbar img").attr("src", "images/bakery-color.png");
+}
+document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', function () {
+        document.querySelector('.navbar-collapse').classList.remove('show');
+        $(".navbar-toggler i").removeClass("fa-xmark").addClass("fa-bars");
+    });
+});
+
+$(".navbar-toggler").click(function () {
+    if ($(".navbar-toggler i").hasClass("fa-bars")) {
+        $(".navbar-toggler i").removeClass("fa-bars").addClass("fa-xmark");
+    } else {
+        $(".navbar-toggler i").removeClass("fa-xmark").addClass("fa-bars");
+    }
+});
+
+/************** scroll To section by href ************/
 
 $("a[href^='#']").click(function (eventInfo) {
     let aHref = eventInfo.target.getAttribute("href");
