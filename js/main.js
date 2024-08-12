@@ -62,3 +62,40 @@ $(".arrowUP").click(function () {
     $("html,body").animate({ scrollTop: 0 }, 500);
 })
 
+//****************************************************** */
+
+let myColors = ['#f0e4d7', '#f5c0c0', '#ff7171', '#9fd8df', '#206a5d'
+    , '#81b214', 'black', '#f5f7b2','#9e5c5c', '#1cc5dc', '#cf0000', '#890596'];
+let colorBox = $(".colorBox");
+
+for (let i = 0; i < colorBox.length; i++) {
+  colorBox.eq(i).css("backgroundColor", `${myColors[i]}`)
+}
+let SideBarInnerWidth = $(".sidBar-inner").innerWidth();
+console.log(SideBarInnerWidth);
+$("#sideBar").css("right", -SideBarInnerWidth)
+$("#sideBar i").click(function () {
+  if ($("#sideBar").css("right") == "0px") {
+      $("#sideBar").animate({ right: -SideBarInnerWidth }, 1000, function () {
+          $("#sideBar i").addClass(".fa fa-cogs");
+          $("#sideBar i").removeClass(".fa fa-xmark");
+      });
+
+  }
+  else {
+      $("#sideBar").animate({ right: "0px" }, 1000, function () {
+          console.log(SideBarInnerWidth);
+          $("#sideBar i").removeClass(".fa fa-cogs");
+          $("#sideBar i").addClass(".fa fa-xmark");
+      });
+
+  }
+
+})
+
+$("#sideBar span").click(function (eventInfo) {
+  let colorText = $(eventInfo.target).css("backgroundColor");
+  $("p").css("color", colorText);
+})
+
+

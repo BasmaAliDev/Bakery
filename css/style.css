@@ -47,7 +47,35 @@ body {
 * {
     box-sizing: border-box;
 }
+/**************************************/
+#sideBar {
+    display: flex;
+    position: fixed;
+    z-index: 999999;
+    width: 200px;
+    top: 30%;
+}
+.sidBar-inner {
+    background-color: #FFF;
+    padding: .5rem;
+}
 
+#sideBar i {
+    align-self: self-start;
+    background-color: #FFF;
+    color: #666;
+    padding: .5rem;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.sidBar-inner h4{
+    font-size: 1.2rem;
+}
+.colorBox {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+}
 /*****************loding Screen*/
 .loadingScreen {
     background-color: black;
